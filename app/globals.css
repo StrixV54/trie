@@ -16,18 +16,27 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.app-body {
+  @apply flex flex-row h-screen items-center justify-between;
+  @apply bg-white dark:bg-black overflow-hidden w-screen;
+  @apply text-black dark:text-white text-xl;
+}
+
+.header-sidebar {
+  @apply w-[400px] h-screen px-4 py-5 flex flex-col gap-2;
+  @apply bg-white dark:bg-[#232326] border-r-2 border-[#393939]/50 dark:border-[#393939]
+}
+
+.main-body {
+  @apply w-full h-screen flex flex-row bg-white dark:bg-[#1E1E21] overflow-hidden px-4 py-5
+}
+
+.tiny-calender-container{
+  @apply h-[400px]
 }

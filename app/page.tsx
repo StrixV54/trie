@@ -1,9 +1,21 @@
-import Image from "next/image";
+import Profile from '@/components/Profile'
+import Calender from '@/components/Calender'
+import { default as TinyCalender } from '@/components/Common/Calendar'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello
-    </main>
-  );
+    <div className="app-body">
+      <aside className="header-sidebar">
+        <Profile />
+        <div className="tiny-calender-container">
+          <TinyCalender date={new Date()}>{(day: Date) => <div>-</div>}</TinyCalender>
+        </div>
+      </aside>
+      <main className="main-body">
+        <div className='w-full'>
+          <Calender />
+        </div>
+      </main>
+    </div>
+  )
 }
