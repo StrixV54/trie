@@ -18,8 +18,8 @@
 }
 
 .calendar-day.in-month {
-  @apply bg-white dark:bg-gray-800;
-  @apply dark:hover:bg-gray-800/50 hover:bg-gray-50;
+  @apply bg-white dark:bg-zinc-800;
+  @apply dark:hover:bg-zinc-800/50 hover:bg-gray-50;
 }
 
 .week-view .calendar-day {
